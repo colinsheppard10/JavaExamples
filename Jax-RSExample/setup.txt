@@ -1,0 +1,4 @@
+Setup:
+1) Follow steps here: https://javabrains.io/courses/javaee_jaxrs/
+2) Build Project: mvn clean install
+3) Run Program: mvn tomcat7:run
