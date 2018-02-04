@@ -1,0 +1,6 @@
+Setup:
+1) Follow steps here https://mapr.com/blog/getting-started-sample-programs-apache-kafka-09/
+2) Build Project: mvn clean install package
+3) Run Program: 
+	1) java -cp kafkaProj-0.0.1-SNAPSHOT-shaded.jar com.colin.sheppard.kafkaProj.App producer
+	2) java -cp kafkaProj-0.0.1-SNAPSHOT-shaded.jar com.colin.sheppard.kafkaProj.App consumer
