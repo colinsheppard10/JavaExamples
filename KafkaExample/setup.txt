@@ -1,6 +1,11 @@
 Setup:
-1) Follow steps here https://mapr.com/blog/getting-started-sample-programs-apache-kafka-09/
-2) Build Project: mvn clean install package
-3) Run Program: 
-	1) java -cp kafkaProj-0.0.1-SNAPSHOT-shaded.jar com.colin.sheppard.kafkaProj.App producer
-	2) java -cp kafkaProj-0.0.1-SNAPSHOT-shaded.jar com.colin.sheppard.kafkaProj.App consumer
+1) un-tar kafka: tar -xzf kafka_2.11-1.1.0.tgz
+2) cd into kafka_2.11-1.1.0 and start zookeeper: bin/zookeeper-server-start.sh config/zookeeper.properties &
+3) start the kafka server: bin/kafka-server-start.sh config/server.properties
+4) create kafka topic: bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic fast-messages
+5) cd into /KafkaExample, Build Project: mvn clean install package
+6) Run Program:
+	1) java -cp kafkaProj-0.0.1-SNAPSHOT-shaded.jar com.colin.sheppard.kafkaProj.App consumer
+	2) java -cp kafkaProj-0.0.1-SNAPSHOT-shaded.jar com.colin.sheppard.kafkaProj.App producer
+
+Good reference: https://mapr.com/blog/getting-started-sample-programs-apache-kafka-09/
